@@ -20,9 +20,8 @@ RUN apk --update add --no-cache -t .build-deps \
     git \
     && set -ex \
     && echo "===> Install malice/xori plugin..." \
-    && cd /tmp \
-    && git clone https://github.com/endgameinc/xori.git \
-    && cd xori \
+    && git clone https://github.com/endgameinc/xori.git /xori \
+    && cd /xori \
     && cargo build --release \
     && cp xori.json.example xori.json \
     && ./target/release/pesymbols \
@@ -32,5 +31,5 @@ RUN apk --update add --no-cache -t .build-deps \
 
 WORKDIR /malware
 
-ENTRYPOINT ["su-exec","malice","/sbin/tini","--","xori"]
+ENTRYPOINT ["su-exec","malice","/sbin/tini","--","/xori/target/release/xori"]
 CMD ["--help"]
