@@ -24,8 +24,9 @@ RUN apk --update add --no-cache -t .build-deps \
     && git clone https://github.com/endgameinc/xori.git \
     && cd xori \
     && cargo build --release \
+    && cp xori.json.example xori.json \
     && ./target/release/pesymbols \
-    && mv xori /usr/sbin \
+    && mv xori /usr/sbin/xori \
     && echo "\t[*] clean up..." \
     && apk del --purge .build-deps
 
