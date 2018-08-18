@@ -1,7 +1,5 @@
 ![logo](https://github.com/malice-plugins/xori/blob/master/docs/xori.png)
 
-# xori
-
 [![Circle CI](https://circleci.com/gh/malice-plugins/xori.png?style=shield)](https://circleci.com/gh/malice-plugins/xori) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/malice/xori.svg)](https://hub.docker.com/r/malice/xori/) [![Docker Pulls](https://img.shields.io/docker/pulls/malice/xori.svg)](https://hub.docker.com/r/malice/xori/) [![Docker Image](https://img.shields.io/badge/docker%20image-69.5MB-blue.svg)](https://hub.docker.com/r/malice/xori/)
 
 > Malice Xori Disassembler Plugin

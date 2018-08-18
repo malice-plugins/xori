@@ -57,7 +57,7 @@ test_all: test test_elastic test_markdown test_web
 test: malware
 	@echo "===> ${NAME} --help"
 	docker run --init --rm $(ORG)/$(NAME):$(VERSION) --help
-	docker run --init --rm -v $(PWD):/malware $(ORG)/$(NAME):$(VERSION) -V $(MALWARE) | jq . > docs/results.json
+	docker run --init --rm -v $(PWD):/malware $(ORG)/$(NAME):$(VERSION) -f $(MALWARE) | jq . > docs/results.json
 	cat docs/results.json | jq .
 
 .PHONY: test_elastic
