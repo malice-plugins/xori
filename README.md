@@ -2,7 +2,7 @@
 
 [![Circle CI](https://circleci.com/gh/malice-plugins/xori.png?style=shield)](https://circleci.com/gh/malice-plugins/xori) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/malice/xori.svg)](https://hub.docker.com/r/malice/xori/) [![Docker Pulls](https://img.shields.io/docker/pulls/malice/xori.svg)](https://hub.docker.com/r/malice/xori/) [![Docker Image](https://img.shields.io/badge/docker%20image-69.5MB-blue.svg)](https://hub.docker.com/r/malice/xori/)
 
-> Malice Xori Disassembler Plugin
+> Malice [Xori Disassembler](https://github.com/endgameinc/xori) Plugin
 
 ---
 
@@ -17,8 +17,8 @@
 
 ## Usage
 
-```
-docker run --rm -v /path/to/malware:/malware malice/xori xori
+```bash
+docker run --rm -v /path/to/malware:/malware malice/xori -f EXE
 ```
 
 ```bash
