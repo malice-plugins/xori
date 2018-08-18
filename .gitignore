@@ -10,3 +10,5 @@ Cargo.lock
 **/*.rs.bk
 
 *.bu
+tests/malware
+tests/not.malware

@@ -7,7 +7,7 @@ LABEL malice.plugin.category="pe"
 LABEL malice.plugin.mime="application/x-dosexec"
 LABEL malice.plugin.docker.engine="*"
 
-COPY xori.json /usr/sbin/
+# COPY xori.json /usr/sbin/
 RUN apk --update add --no-cache rust
 RUN apk --update add --no-cache -t .build-deps \
     openssl-dev \
@@ -20,6 +20,7 @@ RUN apk --update add --no-cache -t .build-deps \
     git \
     && set -ex \
     && echo "===> Install malice/xori plugin..." \
+    && mkdir /xori \
     && git clone https://github.com/endgameinc/xori.git /xori \
     && cd /xori \
     && cargo build --release \
